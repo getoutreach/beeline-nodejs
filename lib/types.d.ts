@@ -155,6 +155,7 @@ declare namespace beeline {
 
     addTraceContext(metadataContext: MetadataContext): void;
     addContext(metadataContext: MetadataContext): void;
+    incrementTraceRollup(key: string, durationMs: number, count?: number): void;
 
     bindFunctionToTrace<T extends AnyFunction>(fn:T): T;
     runWithoutTrace<T extends AnyFunction>(fn:T): ReturnType<T>;
